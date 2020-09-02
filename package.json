@@ -1,0 +1,94 @@
+{
+  "name": "@fransvilhelm/react-task-runner",
+  "version": "0.0.1",
+  "description": "A React task runner",
+  "source": "src/index.ts",
+  "main": "dist/react-task-runner.js",
+  "umd:main": "dist/react-task-runner.umd.js",
+  "module": "dist/react-task-runner.module.js",
+  "esmodule": "dist/react-task-runner.modern.js",
+  "types": "dist/react-task-runner.d.ts",
+  "repository": "git@github.com:adambrgmn/react-task-runner.git",
+  "author": "Adam Bergman",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "microbundle",
+    "dev": "microbundle watch",
+    "test": "jest",
+    "semantic-release": "semantic-release"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
+    "@babel/preset-typescript": "^7.10.4",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^10.4.9",
+    "@types/jest": "^26.0.12",
+    "@types/node": "^14.6.2",
+    "@types/react": "^16.9.49",
+    "@types/react-dom": "^16.9.8",
+    "@types/testing-library__jest-dom": "^5.9.2",
+    "@types/testing-library__react": "^10.2.0",
+    "@typescript-eslint/eslint-plugin": "^2.34.0",
+    "@typescript-eslint/parser": "^2.34.0",
+    "@xstate/react": "^0.8.1",
+    "babel-eslint": "^10.1.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^6.8.0",
+    "eslint-config-react-app": "^5.2.1",
+    "eslint-plugin-flowtype": "^4.7.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^2.5.1",
+    "husky": "^4.2.5",
+    "jest": "^26.4.2",
+    "lint-staged": "^10.2.13",
+    "microbundle": "^0.12.3",
+    "prettier": "^2.1.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "semantic-release": "^17.1.1",
+    "typescript": "^4.0.2",
+    "xstate": "^4.13.0"
+  },
+  "peerDependencies": {
+    "@xstate/react": ">=0.8.0",
+    "react": ">=16.8.0",
+    "xstate": ">=4.7.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx}": [
+      "eslint --fix"
+    ],
+    "*.{js,ts,jsx,tsx,json,md,yml,html}": [
+      "prettier --write"
+    ]
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "all",
+    "proseWrap": "always"
+  }
+}
