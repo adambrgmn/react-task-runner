@@ -5,7 +5,7 @@
   "source": "src/index.ts",
   "main": "dist/react-task-runner.js",
   "umd:main": "dist/react-task-runner.umd.js",
-  "module": "dist/react-task-runner.module.js",
+  "module": "dist/react-task-runner.esm.js",
   "esmodule": "dist/react-task-runner.modern.js",
   "types": "dist/react-task-runner.d.ts",
   "repository": "git@github.com:adambrgmn/react-task-runner.git",
@@ -23,6 +23,8 @@
   "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.11.5",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.10.4",
+    "@babel/plugin-proposal-optional-chaining": "^7.11.0",
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-react": "^7.10.4",
     "@babel/preset-typescript": "^7.10.4",
