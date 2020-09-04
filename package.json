@@ -18,6 +18,7 @@
     "build": "microbundle",
     "dev": "microbundle watch",
     "test": "jest",
+    "lint": "eslint --ext .js --ext .ts --ext .tsx src",
     "semantic-release": "semantic-release"
   },
   "dependencies": {},
